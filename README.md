@@ -2,12 +2,6 @@
 Performance characterization of AutoNUMA, TPP, and DAMON under emulated CXL memory tiering in QEMU — four workloads, custom Linux 6.11 kernel
 
 # Hot Page Tracking under CXL Memory Tiering
-
-**Course:** EECE5643 — Simulation and Performance Evaluation, Northeastern University
-**Authors:** Jashwanth, Venkatesh, Sathwik
-
----
-
 ## Overview
 
 This project characterizes three Linux kernel hot-page migration tools — AutoNUMA (PTE-scan), TPP, and DAMON_RECLAIM — on an emulated two-tier memory system built inside QEMU. One node holds fast DRAM, the other emulates slower CXL memory. Four workloads are run across all three tools to identify which performs best and under what conditions.
