@@ -68,16 +68,6 @@ Do not enable demotion unless there is measured DRAM pressure.
 
 ---
 
-## Reproducibility notes
-
-- `CONFIG_CXL_REGION_INVALIDATION_TEST=y` must be compiled into the kernel — region commit fails silently without it
-- `auto_online_blocks` must be set to `online_movable` before creating the CXL region, or pages land in `ZONE_NORMAL` and cannot be migrated
-- `get_mempolicy()` reports wrong node IDs for Node 2 pages in Linux 6.11 — use `move_pages()` instead
-- QEMU silently drops HMAT entries if bandwidth values are not MiB-aligned
-
----
-
 ## Report
 
-Full write-up with setup scripts, kernel config, migration diagnostics, and result tables:
-[EECE5643_ProjectReport.pdf](./EECE5643_ProjectReport.pdf)
+Full write-up with setup scripts, kernel config, migration diagnostics, and result tables can be found in the file Report.pdf
